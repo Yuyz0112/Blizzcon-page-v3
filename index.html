@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="GB18030" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;text/html" />
+    <title>2015暴雪嘉年华专题——TG兽吧</title>
+    <meta name="description" content="TG兽吧2015年暴雪嘉年华专题 暴雪嘉年华最新资讯 最快实时报道尽在嘉年华专题">
+    <meta name="keywords" content="暴雪嘉年华|嘉年华新闻|嘉年华资讯|魔兽世界|风暴英雄|暗黑破坏神3|炉石传说|守望先锋|星际争霸2">
+    <script>
+    var sUserAgent=navigator.userAgent.toLowerCase();var bIsIpad=sUserAgent.match(/ipad/i)=="ipad";var bIsIphoneOs=sUserAgent.match(/iphone os/i)=="iphone os";var bIsMidp=sUserAgent.match(/midp/i)=="midp";var bIsUc7=sUserAgent.match(/rv:1.2.3.4/i)=="rv:1.2.3.4";var bIsUc=sUserAgent.match(/ucweb/i)=="ucweb";var bIsAndroid=sUserAgent.match(/android/i)=="android";var bIsCE=sUserAgent.match(/windows ce/i)=="windows ce";var bIsWM=sUserAgent.match(/windows mobile/i)=="windows mobile";if(bIsIpad||bIsIphoneOs||bIsMidp||bIsUc7||bIsUc||bIsAndroid||bIsCE||bIsWM){var oldurl=window.location.href;window.location.href=oldurl.replace("blizzcon2015","bmobile")}
+    </script>
+    <link rel="stylesheet" href="css/style.css?v1">
+    <link rel="stylesheet" href="css/scrollbar.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/plugin.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="nav">
+        <div class="nav-left">
+          <a href="http://wow.tgbus.com/Special/blizzcon2015/" class="nav-btn hot cur" id="select">热点</a>
+          <a href="http://wow.tgbus.com/Special/blizzcon2015/match/" class="nav-btn stream">直播</a>
+          <a href="http://wow.tgbus.com/Special/blizzcon2015/match/#chartarea" class="nav-btn match">赛事</a>
+        </div>
+        <a href="http://wow.tgbus.com/" target="_blank">
+          <div class="home-logo">
+            <span class="fa home fa-home fa-2x"></span>
+          </div>
+        </a>
+        <div class="nav-right">
+          <a href="http://wow.tgbus.com/Special/blizzcon2015/media/" class="nav-btn pic">图片</a>
+          <a href="http://wow.tgbus.com/Special/blizzcon2015/media/#videoarea" class="nav-btn video">视频</a>
+          <a href="javascript:;" class="nav-btn comm">评论</a>
+        </div>
+      </div>
+    </div>
+    <div class="bg-animate">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+    </div>
+    <div class="comments-wrap">
+      <div class="top"><h1>评论区</h1></div>
+      <img class="comments-img" src="img/comments-bg.jpg" alt="">
+      <div id="cyBarrage" role="cylabs" data-use="barrage"></div>
+    </div>
+    <!--
+    <div class="pin">
+      <span class="fa fa-angle-double-up fa-2x"></span>
+    </div>
+    -->
+    <div class="wrap">
+      <div class="banner">
+        <img id="logo" src="img/logo1.png">
+        <div class="frag wow1"></div>
+        <div class="frag wow2"></div>
+        <div class="frag ow1"></div>
+        <div class="frag ow2"></div>
+        <div class="frag sc"></div>
+        <div class="frag hs"></div>
+        <div class="frag d3"></div>
+      </div>
+      <!--pjax-container-->
+      <div id="pjax-loading"></div>
+      <div id="container">
+        <div id="pjax-container">
+          <div class="top">
+            <h1>热点聚集</h1>
+          </div>
+          <div class="focus">
+            <div class="slide">
+              <ul>【ArticleList(1002,10361,true,0,4,false,false,,0,3,False,0,0,false)】
+                <li style="background:url()"><a href="{$ArticleUrl}" target="_blank"><div class="text">{$ArticlePic(0,0)}<p>{$Title}</p></div></a></li>【/ArticleList】
+              </ul>
+              <a target="_self" href="javascript:;" class="btn-slide prev">
+                <span class="fa fa-chevron-circle-left fa-2x"></span>
+              </a>
+              <a target="_self" href="javascript:;" class="btn-slide next">
+                <span class="fa fa-chevron-circle-right fa-2x"></span>
+              </a>
+            </div>
+            <div class="slide-shadow"></div>
+            <!--#include File="include/schedule.html"-->
+            <div class="schedule-shadow"></div>
+          </div>
+          <div class="top">
+            <h1>实时快讯</h1>
+          </div>
+          <div class="content clearfix">
+            <div class="news clearfix">
+              <div class="filter">
+                <div class="filter-item icon-blizz cur" id="initial"></div>
+                <div class="filter-item icon-wow"></div>
+                <div class="filter-item icon-hs"></div>
+                <div class="filter-item icon-hot"></div>
+                <div class="filter-item icon-d3"></div>
+                <div class="filter-item icon-sc2"></div>
+                <div class="filter-item ico-ow"></div>
+              </div>
+              <div class="tiles">
+                <div class="preloader">
+                  <div class="loadding"></div>
+                  <!--
+                  <div class="progress-bar">
+                    <div class="instance"></div>
+                  </div>
+                  -->
+                </div>
+                <ul class="tilesmember" id="all-tiles">
+                  【ArticleList(1002,9945,true,0,15,false,false,,0,3,False,0,0,false)】
+                  <li>
+                    <div class="pica">
+                      <a href="{$ArticleUrl}" target="blank_">{$ArticlePic(230,0)}</a>
+                    </div>
+                    <h2>
+                    <a href="{$ArticleUrl}" target="_blank">{$Title}</a>
+                    </h2>
+                    <p class="detail">{$Intro}</p>
+                    <p class="info">
+                      {$ArticleClassName}
+                      <span class="vline">|</span>
+                      <span class="news-date">{$UpdateDate}</span>
+                      <span class="share-btn"> <i class="fa fa-share-alt"></i>
+                      </span>
+                      <span class="share-group weibo" onclick="weiboShare('{$ArticleUrl}','{$Title}')"> <i class="fa fa-weibo"></i>
+                      </span>
+                      <span class="share-group close">
+                        <i class="fa fa-close"></i>
+                      </span>
+                      <span class="share-group qzone" onclick="qzoneShare('{$ArticleUrl}','{$Title}')">
+                        <i class="fa fa-qq"></i>
+                      </span>
+                      <span class="share-group like">
+                        <i class="fa fa-heart"></i>
+                      </span>
+                      <span class="share-group tencent" onclick="tencentShare('{$ArticleUrl}','{$Title}')">
+                        <i class="fa fa-tencent-weibo"></i>
+                      </span>
+                      <span class="share-group wechat">
+                        <i class="fa fa-weixin" onclick="wechatShare('{$ArticleUrl}')"></i>
+                      </span>
+                      <span class="plus">+1</span>
+                    </p>
+                  </li>
+                  【/ArticleList】
+                </ul>
+                <ul class="tilesmember" id="wow-tiles">
+                </ul>
+                <ul class="tilesmember" id="hs-tiles">
+                </ul>
+                <ul class="tilesmember" id="hot-tiles">
+                </ul>
+                <ul class="tilesmember" id="d3-tiles">
+                </ul>
+                <ul class="tilesmember" id="sc2-tiles">
+                </ul>
+                <ul class="tilesmember" id="ow-tiles">
+                </ul>
+              </div>
+              <div class="more-btn">
+                <p>加载更多</p>
+                <div class="spinner">
+                  <div class="bounce1"></div>
+                  <div class="bounce2"></div>
+                  <div class="bounce3"></div>
+                </div>
+              </div>
+            </div>
+            <div class="rank clearfix">
+              <div class="top-group clearfix">
+                <div class="week-btn cur" id="origin">周</div>
+                <div class="title">点击排行</div>
+                <div class="month-btn">月</div>
+              </div>
+              <div class="rank-content">
+                <ul class="week-rank">
+                  【ArticleList(1002,9945,true,0,10,false,false,,7,5,True,40,0)】
+                  <li>
+                    <a class="underline-left" href="{$ArticleUrl}" target="_blank">
+                      {$Title}
+                    </a>
+                  </li>
+                  【/ArticleList】
+                </ul>
+                <ul class="month-rank">
+                  【ArticleList(1002,9945,true,0,10,false,false,,30,5,True,40,0)】
+                  <li>
+                    <a class="underline-left" href="{$ArticleUrl}" target="_blank">
+                      {$Title}
+                    </a>
+                  </li>
+                  【/ArticleList】
+                </ul>
+              </div>
+              <div class="float-bottom"></div>
+            </div>
+            <div class="adv">
+              <a href="#" target="_blank">
+              <img class="" src="img/ad.jpg"></a>
+            </div>
+            <div class="top-btn"><i class="fa fa-chevron-up"></i></div>
+          </div>
+          <script>
+            $(function(){var unslider=$(".slide").unslider({speed:1000,delay:3000,dots:true,});$(".btn-slide").click(function(){var fn=this.className.split(" ")[1];unslider.data("unslider")[fn]()});for(var i=0;i<$(".slide .text").length;i++){var u=$(".text .pic1")[i].src;u="url("+u+")";$($(".slide").find("li").get(i)).css("background",u)}$(".date-btn").bind("mouseover",function(){$(".date-btn").removeClass("cur");$(this).addClass("cur")});$(".date-btn").bind("mouseout",function(){$(".date-btn").removeClass("cur");$("#today").addClass("cur")});$(".date-btn").click(function(){$(".date-btn").removeClass("cur");$(".date-btn").attr("id","");$(this).addClass("cur");$(this).attr("id","today")});$(".1108").hide();$(".date1107").click(function(){$(".1107").show();$(".1108").hide()});$(".date1108").click(function(){$(".1107").hide();$(".1108").show()})});$(document).pjax("a","#container",{fragment:"#pjax-container",timeout:8000});$(document).on("pjax:send",function(){$("#container").css("opacity","0");$("#pjax-loading").css("display","block")});$(document).on("pjax:complete",function(){$("#pjax-loading").css("display","none");$("#container").css("opacity","1")});$(".table").mCustomScrollbar({autoDraggerLength:true,scrollButtons:{enable:true}});(function($){$(".preloader").show();var loadedImages=0,handler=$("#all-tiles li"),counts=handler.length;$("#all-tiles").imagesLoaded().progress(function(instance,image){loadedImages++;var width=$(".progress-bar").width();if(loadedImages==counts){$(".preloader").hide()}else{$(".instance").width(((loadedImages+1)/counts*100)+"%")}});$("#all-tiles").imagesLoaded(function(){makeTiles(handler);$(".more-btn").show()});formatDate()})(jQuery);$(".more-btn").click(function(){addList()});$(function(){$(".icon-blizz").click(function(){$(".tilesmember").hide();getList("#all-tiles");$("#all-tiles").show()});$(".icon-wow").click(function(){$(".tilesmember").hide();getList("#wow-tiles");$("#wow-tiles").show()});$(".icon-hs").click(function(){$(".tilesmember").hide();getList("#hs-tiles");$("#hs-tiles").show()});$(".icon-hot").click(function(){$(".tilesmember").hide();getList("#hot-tiles");$("#hot-tiles").show()});$(".icon-d3").click(function(){$(".tilesmember").hide();getList("#d3-tiles");$("#d3-tiles").show()});$(".icon-sc2").click(function(){$(".tilesmember").hide();getList("#sc2-tiles");$("#sc2-tiles").show()});$(".ico-ow").click(function(){$(".tilesmember").hide();getList("#ow-tiles");$("#ow-tiles").show()});$(".filter-item").bind("mouseover",function(){$(".filter-item").removeClass("cur");$(this).addClass("cur")});$(".filter-item").bind("mouseout",function(){$(".filter-item").removeClass("cur");$("#initial").addClass("cur")});$(".filter-item").click(function(){$(".filter-item").attr("id","");$(this).attr("id","initial")});$(".news h2").addClass("underline-left")});$(function(){$(".month-rank").hide();$(".week-btn").bind("mouseover",function(){$(".month-btn").removeClass("cur");$(this).addClass("cur")});$(".week-btn").bind("mouseout",function(){$(".week-btn").removeClass("cur");$("#origin").addClass("cur")});$(".month-btn").bind("mouseover",function(){$(".week-btn").removeClass("cur");$(this).addClass("cur")});$(".month-btn").bind("mouseout",function(){$(".month-btn").removeClass("cur");$("#origin").addClass("cur")});$(".week-btn").click(function(){$(".month-btn").removeClass("cur");$(".month-btn").attr("id","");$(this).addClass("cur");$(this).attr("id","origin");$(".month-rank").hide();$(".week-rank").show()});$(".month-btn").click(function(){$(".week-btn").removeClass("cur");$(".week-btn").attr("id","");$(this).addClass("cur");$(this).attr("id","origin");$(".week-rank").hide();$(".month-rank").show()});for(var i=1;i<10;i++){var ranknum='<span class="numbg'+i+'">'+i+"</span>";$($(".week-rank").find("a").get(i-1)).html(ranknum+$($(".week-rank").find("a").get(i-1)).html());$($(".month-rank").find("a").get(i-1)).html(ranknum+$($(".month-rank").find("a").get(i-1)).html())}$(window).scroll(function(){var navH=$(".adv").offset().top;var navH1=$(".float-bottom").offset().top;var scroH=$(this).scrollTop();if(scroH>=navH1){$(".adv").css({"position":"fixed","top":0,"margin-left":"750px"});$(".top-btn").css("opacity",1)}else{$(".adv").css({"position":"relative","margin-left":0});$(".top-btn").css("opacity",0)}});$(".top-btn").click(function(){var speed=1000;$("body,html").animate({scrollTop:0},speed);return false})});
+          </script>
+        </div>
+        <!--!pjax-container-->
+      </div>
+    </div>
+    <!--#include File="include/footer.html"-->
+  </body>
+  <script src="js/d3.min.js"></script>
+  <script src="js/comments.js"></script>
+</html>

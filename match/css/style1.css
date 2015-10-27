@@ -1,0 +1,53 @@
+/*font-face*/
+@font-face { font-family: 'gc-icon-font'; src: url('../fonts/gc-icon-font.eot'); src: url('../fonts/gc-icon-font.eot') format('embedded-opentype'), url('../fonts/gc-icon-font.woff') format('woff'), url('../fonts/gc-icon-font.ttf') format('truetype'), url('../fonts/gc-icon-font.svg') format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'overwatch'; src: url('../fonts/overwatch.eot'); src: url('../fonts/overwatch.eot') format('embedded-opentype'), url('../fonts/overwatch.ttf') format('truetype'), url('../fonts/overwatch.woff') format('woff'), url('../fonts/overwatch.svg') format('svg'); font-weight: normal; font-style: normal; }
+
+/*icon*/
+[class^="icon-"], [class*=" icon-"] { font-family: "gc-icon-font"; font-style: normal; font-weight: normal; speak: none; font-variant: normal; text-transform: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+[class^="ico-"], [class*=" ico-"] { font-family: "overwatch"; font-style: normal; font-weight: normal; speak: none; font-variant: normal; text-transform: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.icon-wow:before { content: '\e810'; }
+.icon-sc2:before { content: '\e811'; }
+.icon-d3:before { content: '\e812'; }
+.icon-blizz:before { content: '\e813'; }
+.icon-hs:before { content: '\e814'; }
+.icon-hot:before { content: '\e815'; }
+.ico-ow:before { content: '\e600'; }
+
+/*Default Style*/
+body { background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/bg.jpg) center top no-repeat #000; background-size: auto; font-family: "Microsoft Yahei"; margin: 0; }
+ul, li, ol, table, button,a { margin: 0; padding: 0 }
+a { text-decoration: none; }
+h1 { font-size: 20px; line-height: 40px }
+h2 { font-size: 16px; line-height: 24px }
+
+/* clear float */
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden }
+.clearfix { display: inline-block }
+* html .clearfix { height: 1% }
+.clearfix { display: block }
+
+/*Page Elements*/
+.header { width: 100%; position: fixed; left: 0; top: 0; height: 60px; z-index: 9; -webkit-transition: top .5s; transition: top .5s; }
+.header .nav { width: 1000px; position: relative; margin: 0 auto; height: 60px }
+.header .nav .nav-btn { color: #E8F2FF; margin-left: -18px; position: relative; text-align: center; font-size: 18px; font-weight: bold; width: 105px; height: 60px; display: inline-block; line-height: 60px; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/navas.png) center no-repeat; text-shadow: 0 0 2px #E8F2FF; }
+.header .nav .nav-btn:hover, .header .nav .cur { background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/navas-f.png) center no-repeat; color: #27446E; -webkit-transition: background ease-in-out .5s; transition: background ease-in-out .5s; text-shadow: 0 0 2px #27446E; }
+.header .nav-left { float: left; margin-left: 192px }
+.header .home-logo { color: #E8F2FF; text-shadow: 0 0 10px #E8F2FF; float: left; width: 60px; height: 60px; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/centers-n.png) center; text-align: center }
+.header .home-logo:hover { color: #E8F2FF; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/centers-hover.png) center; -webkit-transition: background ease-in-out .5s; transition: background ease-in-out .5s }
+.header .home-logo span { position: relative; top: 12px }
+.header .nav-right { float: left; margin-left: 20px }
+.wrap { width: 1000px; height: 650px; margin: 0 auto;background: #27446E; background: rgba(39,68,110,0.5); margin-top: 80px ;filter:alpha(opacity=50);}
+.wrap .top { width: 1000px; height: 40px; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/top.png); text-align: center; color: #91C6FF; box-shadow: 0px 0px 10px #ffffff; margin-top: 20px }
+.wrap .filter { height: 80px; text-align: center; margin:0 auto; width: 400px}
+.wrap .filter .filter-item,.wrap .filter-match .filter-item-match { font-size: 30px; line-height: 60px; width: 60px; height: 60px; display: block; float: left; margin: 20px 10px 0 10px; color: #ffffff; text-shadow: 0px 0px 10px #ffffff; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/centers.png); cursor: pointer; }
+.wrap .filter .cur,.wrap .filter-match .cur { color: #29A9FF; text-shadow: 0px 0px 3px #29a9ff; }
+.wrap .filter .filter-item,.wrap .filter-match .filter-item-match [class^="icon-"] { }
+.wrap .filter .filter-item,.wrap .filter-match .filter-item-match [class^="icon-"]:before, .filter-item [class*=" icon-"]:before { margin-right: 0; }
+.wrap .stream-wrapper{width: 880px;height: 495px;margin:20px auto 0 auto;box-shadow: 0px 0px 6px #FFFFFF;border: 4px solid #91C6FF}
+.wrap .filter-match { height: 80px; text-align: center; margin:0 auto; width: 320px}
+.wrap .chart { width: 800px; height: 400px; margin: 20px auto }
+
+/*SVG Elements*/
+.nodeRect { cursor: pointer; fill: #fff; stroke: #91C6FF; stroke-width: 4px;rx:20px;ry:20px;}
+.node text { font-size: 14px;font-weight: bold}
+.link { fill: none; stroke: #ccc; stroke-width: 2px; }

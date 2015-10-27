@@ -1,0 +1,63 @@
+/*animate*/
+@-webkit-keyframes float {
+	0%, 100% { -webkit-transform: translate3d(0, 0px, 0) rotate(0); transform: translate3d(0, 0px, 0) rotate(0); }
+	50% { -webkit-transform: translate3d(0, -10px, 0) rotate(0); transform: translate3d(0, -10px, 0) rotate(0); }
+}
+@keyframes float {
+	0%, 100% { -webkit-transform: translate3d(0, 0px, 0) rotate(0); transform: translate3d(0, 0px, 0) rotate(0); }
+	50% { -webkit-transform: translate3d(0, -10px, 0) rotate(0); transform: translate3d(0, -10px, 0) rotate(0); }
+}
+
+/*Default Style*/
+body { background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/bg.jpg) center top no-repeat #000; background-size: auto; font-family: "Microsoft Yahei"; margin: 0; color: #E8F2FF }
+ul, li, ol, table, button, a, p, img { margin: 0; padding: 0 }
+a { text-decoration: none; color: #E8F2FF }
+li { list-style: none }
+h1 { font-size: 20px; line-height: 40px }
+h2 { font-size: 16px; line-height: 24px }
+
+/* clear float */
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden }
+.clearfix { display: inline-block }
+* html .clearfix { height: 1% }
+.clearfix { display: block }
+
+/*Page Elements*/
+.header { width: 100%; position: fixed; left: 0; top: 0; height: 60px; z-index: 9; -webkit-transition: top .5s; transition: top .5s; }
+.header .nav { width: 1000px; position: relative; margin: 0 auto; height: 60px }
+.header .nav .nav-btn { color: #E8F2FF; margin-left: -18px; position: relative; text-align: center; font-size: 18px; font-weight: bold; width: 105px; height: 60px; display: inline-block; line-height: 60px; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/navas.png) center no-repeat; text-shadow: 0 0 2px #E8F2FF; }
+.header .nav .nav-btn:hover, .header .nav .cur { background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/navas-f.png) center no-repeat; color: #27446E; -webkit-transition: background ease-in-out .5s; transition: background ease-in-out .5s; text-shadow: 0 0 2px #27446E; }
+.header .nav-left { float: left; margin-left: 192px }
+.header .home-logo { color: #E8F2FF; text-shadow: 0 0 10px #E8F2FF; float: left; width: 60px; height: 60px; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/centers-n.png) center; text-align: center }
+.header .home-logo:hover { color: #E8F2FF; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/centers-hover.png) center; -webkit-transition: background ease-in-out .5s; transition: background ease-in-out .5s }
+.header .home-logo span { position: relative; top: 12px }
+.header .nav-right { float: left; margin-left: 20px }
+.wrap-pic { width: 1000px; height: 380px; margin: 0 auto;background: #27446E ;background: rgba(39, 68, 110, 0.5); margin-top: 80px; position: relative;filter:alpha(opacity=50); }
+.more { position: absolute; top: 0; right: 10px; line-height: 40px; font-weight: bold; }
+.more:hover a { color: #91C6FF; -webkit-transition: color ease-in-out .5s; transition: color ease-in-out .5s }
+.top { width: 1000px; height: 40px; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/top.png); text-align: center; color: #91C6FF; box-shadow: 0px 0px 10px #ffffff; margin-top: 20px }
+.wrap-pic .pic-list { margin: 20px; position: relative; height: 300px }
+.wrap-pic .pic-list .pica { overflow: hidden; position: absolute;}
+.wrap-pic .pic-list .pica img { width: 100%; height: 100%; z-index: 1; -webkit-transition: 1.0s; transition: 1.0s; }
+.wrap-pic .pic-list .pica:hover img { -webkit-transform: scale(1.1); transform: scale(1.1); }
+.wrap-pic .pic-list .pica .title { position: absolute; bottom: 0; height: 60px; width: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 2; -webkit-transition: 1.0s; transition: 1.0s; }
+.wrap-pic .pic-list .pica .title .detail { display: none; font-size: 14px; color: #888 }
+.wrap-pic .pic-list .pica:hover .title { height: 100%; -webkit-transform: height(100%); transform: height(100%); }
+.wrap-pic .pic-list .pica .title p { margin: 0 5px; }
+.wrap-pic .pic-list .pica:hover .detail { display: block }
+.wrap-pic .pic-list #num1 { width: 480px; height: 300px; top: 0; left: 0 }
+.wrap-pic .pic-list #num2, .wrap-pic .pic-list #num3, .wrap-pic .pic-list #num4, .wrap-pic .pic-list #num5 { width: 240px; height: 150px }
+.wrap-pic .pic-list #num2 { top: 0; left: 480px; }
+.wrap-pic .pic-list #num3 { top: 150px; left: 480px; }
+.wrap-pic .pic-list #num4 { top: 0; left: 720px; }
+.wrap-pic .pic-list #num5 { top: 150px; left: 720px; }
+.wrap-video { width: 1000px; height: 490px; margin: 0 auto;background: #27446E ;background: rgba(39, 68, 110, 0.5); margin-top: 80px; position: relative;filter:alpha(opacity=50); }
+.wrap-video .video-list { margin: 10px 0 }
+.wrap-video .video-list .pic-frame { overflow: hidden; width: 230px; height: 144px }
+.wrap-video .video-list img { width: 100%; height: 100%; -webkit-transition: 1.0s; transition: 1.0s }
+.wrap-video .video-list p { font-size: 16px; padding: 5px; color: #27446E; font-weight: bold }
+.wrap-video .video-list li { margin: 10px; float: left; width: 230px; background: #E8F2FF; position: relative; -webkit-transition: 1.0s; transition: 1.0s; }
+.wrap-video .video-list span { font-size: 50px; color: #29A9FF; opacity: 0.8; position: absolute; top: 50%; left: 50%; margin: -42.5px 0 0 -25px; }
+.wrap-video .video-list li:hover { background: #91C6FF; }
+.wrap-video .video-list li:hover img { -webkit-transform: scale(1.1); transform: scale(1.1); }
+.wrap-video .video-list li:hover span { -webkit-animation: float 0.5s 0s ease-in-out 2; animation: float 0.5s 0s ease-in-out 2; opacity: 1 }

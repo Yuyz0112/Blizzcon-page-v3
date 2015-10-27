@@ -1,0 +1,23 @@
+<body>
+<h1>My Site</h1>
+<a href="#">outer</a>
+<div class="container" id="pjax-container">
+<p>This is page1</p>
+  Go to
+  <a href="test2.html">next page</a>
+  .
+  <script type="text/javascript">
+    $(function(){
+      $("a").click(function(){
+        console.log("click a1");
+      })
+      $("a").bind("mouseover",function(){
+        console.log("hover a1");
+      })
+    })
+  </script>
+</div>
+<script>
+    $(document).pjax('a', '#pjax-container',{fragment:'.container', timeout:8000});
+    </script>
+</body>

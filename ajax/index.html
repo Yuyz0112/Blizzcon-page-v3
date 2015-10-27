@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="GB18030" />
+    <title>Ajax List</title>
+  </head>
+  <body>
+    <ul class="tilesmember" id="all-tiles">
+      【ArticleList(1002,9945,true,0,0,false,false,,300,3,False,0,0,false)】
+      <li class="all-news">
+        <div class="pica">
+          <a href="{$ArticleUrl}" target="blank_">{$ArticlePic(230,0)}</a>
+        </div>
+        <h2>
+        <a href="{$ArticleUrl}" target="_blank">{$Title}</a>
+        </h2>
+        <p class="detail">{$Intro}</p>
+        <p class="info">
+          {$ArticleClassName}
+          <span class="vline">|</span>
+          <span class="news-date">{$UpdateDate}</span>
+          <span class="share-btn"> <i class="fa fa-share-alt"></i>
+          </span>
+          <span class="share-group weibo" onclick="weiboShare('{$ArticleUrl}','{$Title}')"> <i class="fa fa-weibo"></i>
+          </span>
+          <span class="share-group close">
+            <i class="fa fa-close"></i>
+          </span>
+          <span class="share-group qzone" onclick="qzoneShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-qq"></i>
+          </span>
+          <span class="share-group like">
+            <i class="fa fa-heart"></i>
+          </span>
+          <span class="share-group tencent" onclick="tencentShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-tencent-weibo"></i>
+          </span>
+          <span class="share-group wechat">
+            <i class="fa fa-weixin" onclick="wechatShare('{$ArticleUrl}')"></i>
+          </span>
+          <span class="plus">+1</span>
+        </p>
+      </li>
+      【/ArticleList】
+    </ul>
+    <ul class="tilesmember" id="wow-tiles">
+      【ArticleList(1002,10351|10352,true,0,0,false,false,,0,3,False,0,0,false)】
+      <li>
+        <div class="pica">
+          <a href="{$ArticleUrl}" target="blank_">{$ArticlePic(230,0)}</a>
+        </div>
+        <h2>
+        <a href="{$ArticleUrl}" target="_blank">{$Title}</a>
+        </h2>
+        <p class="detail">{$Intro}</p>
+        <p class="info">
+          {$ArticleClassName}
+          <span class="vline">|</span>
+          <span class="news-date">{$UpdateDate}</span>
+          <span class="share-btn">
+            <i class="fa fa-share-alt"></i>
+          </span>
+          <span class="share-group weibo" onclick="weiboShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-weibo"></i>
+          </span>
+          <span class="share-group close">
+            <i class="fa fa-close"></i>
+          </span>
+          <span class="share-group qzone" onclick="qzoneShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-qq"></i>
+          </span>
+          <span class="share-group like">
+            <i class="fa fa-heart"></i>
+          </span>
+          <span class="share-group tencent" onclick="tencentShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-tencent-weibo"></i>
+          </span>
+          <span class="share-group wechat">
+            <i class="fa fa-weixin" onclick="wechatShare('{$ArticleUrl}')"></i>
+          </span>
+          <span class="plus">+1</span>
+        </p>
+      </li>
+      【/ArticleList】
+    </ul>
+    <ul class="tilesmember" id="hs-tiles">
+      【ArticleList(1002,10351|10355,true,0,0,false,false,,0,3,False,0,0,false)】
+      <li>
+        <div class="pica">
+          <a href="{$ArticleUrl}" target="blank_">{$ArticlePic(230,0)}</a>
+        </div>
+        <h2>
+        <a href="{$ArticleUrl}" target="_blank">{$Title}</a>
+        </h2>
+        <p class="detail">{$Intro}</p>
+        <p class="info">
+          {$ArticleClassName}
+          <span class="vline">|</span>
+          <span class="news-date">{$UpdateDate}</span>
+          <span class="share-btn">
+            <i class="fa fa-share-alt"></i>
+          </span>
+          <span class="share-group weibo" onclick="weiboShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-weibo"></i>
+          </span>
+          <span class="share-group close">
+            <i class="fa fa-close"></i>
+          </span>
+          <span class="share-group qzone" onclick="qzoneShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-qq"></i>
+          </span>
+          <span class="share-group like">
+            <i class="fa fa-heart"></i>
+          </span>
+          <span class="share-group tencent" onclick="tencentShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-tencent-weibo"></i>
+          </span>
+          <span class="share-group wechat">
+            <i class="fa fa-weixin" onclick="wechatShare('{$ArticleUrl}')"></i>
+          </span>
+          <span class="plus">+1</span>
+        </p>
+      </li>
+      【/ArticleList】
+    </ul>
+    <ul class="tilesmember" id="hot-tiles">
+      【ArticleList(1002,10351|10354,true,0,0,false,false,,0,3,False,0,0,false)】
+      <li>
+        <div class="pica">
+          <a href="{$ArticleUrl}" target="blank_">{$ArticlePic(230,0)}</a>
+        </div>
+        <h2>
+        <a href="{$ArticleUrl}" target="_blank">{$Title}</a>
+        </h2>
+        <p class="detail">{$Intro}</p>
+        <p class="info">
+          {$ArticleClassName}
+          <span class="vline">|</span>
+          <span class="news-date">{$UpdateDate}</span>
+          <span class="share-btn">
+            <i class="fa fa-share-alt"></i>
+          </span>
+          <span class="share-group weibo" onclick="weiboShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-weibo"></i>
+          </span>
+          <span class="share-group close">
+            <i class="fa fa-close"></i>
+          </span>
+          <span class="share-group qzone" onclick="qzoneShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-qq"></i>
+          </span>
+          <span class="share-group like">
+            <i class="fa fa-heart"></i>
+          </span>
+          <span class="share-group tencent" onclick="tencentShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-tencent-weibo"></i>
+          </span>
+          <span class="share-group wechat">
+            <i class="fa fa-weixin" onclick="wechatShare('{$ArticleUrl}')"></i>
+          </span>
+          <span class="plus">+1</span>
+        </p>
+      </li>
+      【/ArticleList】
+    </ul>
+    <ul class="tilesmember" id="d3-tiles">
+      【ArticleList(1002,10351|10353,true,0,0,false,false,,0,3,False,0,0,false)】
+      <li>
+        <div class="pica">
+          <a href="{$ArticleUrl}" target="blank_">{$ArticlePic(230,0)}</a>
+        </div>
+        <h2>
+        <a href="{$ArticleUrl}" target="_blank">{$Title}</a>
+        </h2>
+        <p class="detail">{$Intro}</p>
+        <p class="info">
+          {$ArticleClassName}
+          <span class="vline">|</span>
+          <span class="news-date">{$UpdateDate}</span>
+          <span class="share-btn">
+            <i class="fa fa-share-alt"></i>
+          </span>
+          <span class="share-group weibo" onclick="weiboShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-weibo"></i>
+          </span>
+          <span class="share-group close">
+            <i class="fa fa-close"></i>
+          </span>
+          <span class="share-group qzone" onclick="qzoneShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-qq"></i>
+          </span>
+          <span class="share-group like">
+            <i class="fa fa-heart"></i>
+          </span>
+          <span class="share-group tencent" onclick="tencentShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-tencent-weibo"></i>
+          </span>
+          <span class="share-group wechat">
+            <i class="fa fa-weixin" onclick="wechatShare('{$ArticleUrl}')"></i>
+          </span>
+          <span class="plus">+1</span>
+        </p>
+      </li>
+      【/ArticleList】
+    </ul>
+    <ul class="tilesmember" id="sc2-tiles">
+      【ArticleList(1002,10351|10350,true,0,0,false,false,,0,3,False,0,0,false)】
+      <li>
+        <div class="pica">
+          <a href="{$ArticleUrl}" target="blank_">{$ArticlePic(230,0)}</a>
+        </div>
+        <h2>
+        <a href="{$ArticleUrl}" target="_blank">{$Title}</a>
+        </h2>
+        <p class="detail">{$Intro}</p>
+        <p class="info">
+          {$ArticleClassName}
+          <span class="vline">|</span>
+          <span class="news-date">{$UpdateDate}</span>
+          <span class="share-btn">
+            <i class="fa fa-share-alt"></i>
+          </span>
+          <span class="share-group weibo" onclick="weiboShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-weibo"></i>
+          </span>
+          <span class="share-group close">
+            <i class="fa fa-close"></i>
+          </span>
+          <span class="share-group qzone" onclick="qzoneShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-qq"></i>
+          </span>
+          <span class="share-group like">
+            <i class="fa fa-heart"></i>
+          </span>
+          <span class="share-group tencent" onclick="tencentShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-tencent-weibo"></i>
+          </span>
+          <span class="share-group wechat">
+            <i class="fa fa-weixin" onclick="wechatShare('{$ArticleUrl}')"></i>
+          </span>
+          <span class="plus">+1</span>
+        </p>
+      </li>
+      【/ArticleList】
+    </ul>
+    <ul class="tilesmember" id="ow-tiles">
+      【ArticleList(1002,10351|10349,true,0,0,false,false,,0,3,False,0,0,false)】
+      <li>
+        <div class="pica">
+          <a href="{$ArticleUrl}" target="blank_">{$ArticlePic(230,0)}</a>
+        </div>
+        <h2>
+        <a href="{$ArticleUrl}" target="_blank">{$Title}</a>
+        </h2>
+        <p class="detail">{$Intro}</p>
+        <p class="info">
+          {$ArticleClassName}
+          <span class="vline">|</span>
+          <span class="news-date">{$UpdateDate}</span>
+          <span class="share-btn">
+            <i class="fa fa-share-alt"></i>
+          </span>
+          <span class="share-group weibo" onclick="weiboShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-weibo"></i>
+          </span>
+          <span class="share-group close">
+            <i class="fa fa-close"></i>
+          </span>
+          <span class="share-group qzone" onclick="qzoneShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-qq"></i>
+          </span>
+          <span class="share-group like">
+            <i class="fa fa-heart"></i>
+          </span>
+          <span class="share-group tencent" onclick="tencentShare('{$ArticleUrl}','{$Title}')">
+            <i class="fa fa-tencent-weibo"></i>
+          </span>
+          <span class="share-group wechat">
+            <i class="fa fa-weixin" onclick="wechatShare('{$ArticleUrl}')"></i>
+          </span>
+          <span class="plus">+1</span>
+        </p>
+      </li>
+      【/ArticleList】
+    </ul>
+  </body>
+</html>

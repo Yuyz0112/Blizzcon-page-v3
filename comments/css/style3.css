@@ -1,0 +1,46 @@
+body { background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/bg.jpg) center top no-repeat #000; background-size: auto; font-family: "Microsoft Yahei"; margin: 0; color: #E8F2FF }
+ul, li, ol, table, button, a, p, img { margin: 0; padding: 0 }
+a { text-decoration: none; color: #E8F2FF }
+li { list-style: none }
+h1 { font-size: 20px; line-height: 40px }
+h2 { font-size: 16px; line-height: 24px }
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden }
+.clearfix { display: inline-block }
+* html .clearfix { height: 1% }
+.clearfix { display: block }
+.header { width: 100%; position: fixed; left: 0; top: 0; height: 60px; z-index: 9; -webkit-transition: top .5s; transition: top .5s }
+.header .nav { width: 1000px; position: relative; margin: 0 auto; height: 60px }
+.header .nav .nav-btn { color: #E8F2FF; margin-left: -18px; position: relative; text-align: center; font-size: 18px; font-weight: bold; width: 105px; height: 60px; display: inline-block; line-height: 60px; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/navas.png) center no-repeat; text-shadow: 0 0 2px #E8F2FF }
+.header .nav .nav-btn:hover, .header .nav .cur { background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/navas-f.png) center no-repeat; color: #27446E; -webkit-transition: background ease-in-out .5s; transition: background ease-in-out .5s; text-shadow: 0 0 2px #27446E }
+.header .nav-left { float: left; margin-left: 192px }
+.header .home-logo { color: #E8F2FF; text-shadow: 0 0 10px #E8F2FF; float: left; width: 60px; height: 60px; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/centers-n.png) center; text-align: center }
+.header .home-logo:hover { color: #E8F2FF; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/centers-hover.png) center; -webkit-transition: background ease-in-out .5s; transition: background ease-in-out .5s }
+.header .home-logo span { position: relative; top: 12px }
+.header .nav-right { float: left; margin-left: 20px }
+.comments-wrap { width: 1000px; height: 650px; margin: 0 auto; background: rgba(39, 68, 110, 0.5); margin-top: 80px }
+.comments-wrap .top { width: 1000px; height: 40px; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/top.png); text-align: center; color: #91C6FF; box-shadow: 0px 0px 10px #ffffff; margin-top: 20px }
+#cyBarrage { overflow: hidden; margin: 0; position: absolute; padding: 0; z-index: 2147483647; background-color: rgba(0, 0, 0, 0.5); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4d000000, endColorstr=#4d000000); -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4d000000, endColorstr=#4d000000) }
+#cyBarrage b { animation: cybarrage 6s; -moz-animation: cybarrage 6s; -webkit-animation: cybarrage 6s; -o-animation: cybarrage 6s; -webkit-backface-visibility: hidden; -webkit-transform: matrix(1, 0, 0, 1, 0, 0); overflow-x: visible; overflow-y: visible; white-space: nowrap; word-break: keep-all; border: 0 }
+.cybarrage-op-btn .cyimage-barrage-full-screen { font-size: 12px; text-align: center; color: white; font-family: "Microsoft YaHei", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif; right: 80px; width: 24px }
+.cyimage-barrage-full { background-image: url('http://changyan.sohu.com/img/barrage/barrageFull.png'); right: 34px }
+.cyimage-barrage-close { background-image: url('http://changyan.sohu.com/img/barrage/barrageClose2.png'); right: 10px }
+.cyimage-barrage-submit { background-image: url('http://changyan.sohu.com/img/barrage/barrageComment.png'); right: 58px }
+.cyimage-barrage-submit, .cyimage-barrage-close, .cyimage-barrage-full, .cyimage-barrage-full-screen { background-repeat: no-repeat; _background: url(http://bcscdn.baidu.com/public03/5a9dedea44536e3e9bf162fbe6aae81b.gif)
+no-repeat; display: block; font-size: 0; width: 14px; height: 14px; text-align: center; position: absolute; top: 10px; cursor: pointer; overflow: visible }
+.cyimage-barrage-rescover-screen { background-image: url('http://changyan.sohu.com/img/barrage/closeFullScreen.png'); display: block; width: 40px; height: 40px; position: absolute; top: 10px; cursor: pointer; overflow: visible }
+.cyimage-barrage-rescover-screen { right: 25px }
+#cyBarrage #cybarrage-submit-box { margin-top: 20px; margin-bottom: 20px }
+#cyBarrage .cyBarrage-comment-dialog { display: block; width: 100%; height: 70px; overflow: visible; position: absolute; bottom: 0px }
+#cyBarrage .cyBarrage-comment-dialog .barrage-submit-text { height: 30px; line-height: 30px; border: 0; margin: 0; padding: 0 }
+.barrage-submit-box-container { margin-top: 20px; width: 100%; height: 100px }
+.barrage-submit-box-content { position: absolute; margin-left: 30px; display: inline }
+#cyBarrage .cyBarrage-comment-dialog #cybarrage-submit-content { padding-left: 12px }
+.barrage-submit-btn { color: white; font-family: "Microsoft YaHei"; font-size: 14px; margin-left: 12px; margin-right: 12px; margin-top: 8px; position: absolute; display: inline }
+.barrage-submit-box-btn { height: 30px; width: 80px; background-color: #1792de; position: absolute; border: 0; cursor: pointer; text-align: left; display: inline }
+.barrage-submit-box-btn:hover { background-color: #42aaec }
+.cyBarrage-comment-box b { font_family: "Microsoft YaHei"; position: absolute; visibility: hidden; border: 0px solid #ccc }
+#cytbox { margin-left: auto; margin-right: auto; text-align: center; clear: both; font-size: 10px; color: #635959; font-family: "Microsoft YaHei", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif; width: 50px; line-height: 30px; z-index: 1000; overflow: hidden; bottom: 100px; right: -1px; position: fixed !important; _position: absolute; _top: expression(eval(document.documentElement.scrollTop +  
+	document.documentElement.clientHeight - this.offsetHeight - (parseInt(this.currentStyle.marginTop, 10)||0)- (parseInt(this.currentStyle.marginBottom, 10)||0))-
+(parseInt(this.currentStyle.bottom, 10)||0)) }
+#cytbox #cyicon img { width: 80%; height: 40%; cursor: pointer; position: relative }
+#cytbox span { font-weight: bold; width: 100%; height: 30% }

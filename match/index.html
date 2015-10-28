@@ -1,63 +1,106 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="GB18030" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge;text/html" />
-    <title>Match</title>
-    <link rel="stylesheet" href="css/style1.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <script src="http://wow.tgbus.com/special/blizzcon2015/js/jquery-1.11.3.min.js"></script>
-  </head>
-  <body>
-    <div class="header">
-      <div class="nav">
-        <div class="nav-left">
-          <a href="http://wow.tgbus.com/special/blizzcon2015/" class="nav-btn hot">热点</a>
-          <a href="http://wow.tgbus.com/special/match2015/" class="nav-btn stream cur" id="select">直播</a>
-          <a href="http://wow.tgbus.com/special/match2015/#chartarea" class="nav-btn match">赛事</a>
+<head>
+  <meta charset="GB18030" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;text/html" />
+  <title>Match</title>
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <script src="http://wow.tgbus.com/special/blizzcon2015/js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="nav">
+      <div class="nav-left">
+        <a href="http://wow.tgbus.com/special/blizzcon2015/" class="nav-btn hot">热点</a>
+        <a href="http://wow.tgbus.com/special/match2015/" class="nav-btn stream cur" id="select">直播</a>
+        <a href="http://wow.tgbus.com/special/match2015/#chartarea" class="nav-btn match">赛事</a>
+      </div>
+      <a href="http://wow.tgbus.com/">
+        <div class="home-logo">
+          <span class="fa home fa-home fa-2x"></span>
         </div>
-        <a href="http://wow.tgbus.com/">
-          <div class="home-logo">
-            <span class="fa home fa-home fa-2x"></span>
-          </div>
-        </a>
-        <div class="nav-right">
-          <a href="http://wow.tgbus.com/special/media2015/" class="nav-btn pic">图片</a>
-          <a href="http://wow.tgbus.com/special/media2015/#videoarea" class="nav-btn video">视频</a>
-          <a href="http://wow.tgbus.com/special/comments2015/" class="nav-btn comm">评论</a>
-        </div>
+      </a>
+      <div class="nav-right">
+        <a href="http://wow.tgbus.com/special/media2015/" class="nav-btn pic">图片</a>
+        <a href="http://wow.tgbus.com/special/media2015/#videoarea" class="nav-btn video">视频</a>
+        <a href="http://wow.tgbus.com/special/comments2015/" class="nav-btn comm">评论</a>
       </div>
     </div>
-    <!--pjax-container-->
-    <div id="pjax-container">
-      <div class="top"><h1>赛事直播</h1></div>
-      <div class="stream-wrap p-wrap">
-        <div class="filter-stream">
-          <div class="filter-item-stream icon-blizz cur" id="initial1"></div>
-          <div class="filter-item-stream icon-wow"></div>
-          <div class="filter-item-stream icon-hs"></div>
-          <div class="filter-item-stream icon-hot"></div>
-          <div class="filter-item-stream icon-sc2"></div>
-        </div>
-        <div class="stream-wrapper">
-          <embed width="880" height="495" allownetworking="all" allowscriptaccess="always" src="http://staticlive.douyutv.com/common/share/play.swf?room_id=424559" quality="high" bgcolor="#000" wmode="window" allowfullscreen="true" allowFullScreenInteractive="true">
-        </div>
-      </div>
-      <div class="top" id="chartarea"><h1>对阵图表</h1></div>
-      <div class="chart-wrap p-wrap">
-        <div class="filter-match">
-          <div class="filter-item-match icon-wow cur" id="initial2"></div>
-          <div class="filter-item-match icon-hs"></div>
-          <div class="filter-item-match icon-hot"></div>
-          <div class="filter-item-match icon-sc2"></div>
-        </div>
-        <div class="chart"></div>
-      </div>
-      <script>
-      $(function(){$(".filter-item-stream").bind("mouseover",function(){$(".filter-item-stream").removeClass("cur");$(this).addClass("cur")});$(".filter-item-stream").bind("mouseout",function(){$(".filter-item-stream").removeClass("cur");$("#initial1").addClass("cur")});$(".filter-item-stream").bind("click",function(){$(".filter-item-stream").attr("id","");$(this).attr("id","initial1")});$(".filter-item-match").bind("mouseover",function(){$(".filter-item-match").removeClass("cur");$(this).addClass("cur")});$(".filter-item-match").bind("mouseout",function(){$(".filter-item-match").removeClass("cur");$("#initial2").addClass("cur")});$(".filter-item-match").bind("click",function(){$(".filter-item-match").attr("id","");$(this).attr("id","initial2")})});var hot_json={"name":"冠军","children":[{"name":"决赛1","children":[{"name":"Liquid"},{"name":"Cloud9"}]},{"name":"决赛2","children":[{"name":"EG"},{"name":"Fnatic"}]}]}function maketreechart(data,depth){var width=800;var height=400;var padding={left:20,right:20,top:20,bottom:20};var svg=d3.select(".chart").append("svg").attr("width",width+padding.left+padding.right).attr("height",height+padding.top+padding.bottom).append("g").attr("transform","translate("+padding.left+","+padding.top+")");var tree=d3.layout.tree().size([height,width]);var diagonal=d3.svg.diagonal().projection(function(d){return[d.y,d.x]});var root=data;root.x0=height/2;root.y0=0;redraw(root);function redraw(source){var nodes=tree.nodes(root);var links=tree.links(nodes);nodes.forEach(function(d){d.y=d.depth*width/depth});var nodeUpdate=svg.selectAll(".node").data(nodes,function(d){return d.name});var nodeEnter=nodeUpdate.enter();var nodeExit=nodeUpdate.exit();var enterNodes=nodeEnter.append("g").attr("class","node").attr("transform",function(d){var x=source.x0-20;return"translate("+source.y0+","+x+")"}).on("click",function(d){toggle(d);redraw(d)});enterNodes.append("rect").attr("class","nodeRect").attr("width",100).attr("height",40).style("fill",function(d){return d._children?"#91C6FF":"#E8F2FF"});enterNodes.append("text").attr("x",0).attr("y",0).attr("dx","5px").attr("dy","26px").attr("text-anchor",function(d){return"start"}).text(function(d){return d.name}).style("fill-opacity",0);var updateNodes=nodeUpdate.transition().duration(500).attr("transform",function(d){var x=d.x-20;return"translate("+d.y+","+x+")"});updateNodes.select("circle").attr("class","nodeRect").attr("width",40).attr("height",15).style("fill",function(d){return d._children?"#91C6FF":"#E8F2FF"});updateNodes.select("text").style("fill-opacity",1);var exitNodes=nodeExit.transition().duration(500).attr("transform",function(d){var x=source.x-20;return"translate("+source.y+","+x+")"}).remove();exitNodes.select("circle").attr("r",0);exitNodes.select("text").style("fill-opacity",0);var linkUpdate=svg.selectAll(".link").data(links,function(d){return d.target.name});var linkEnter=linkUpdate.enter();var linkExit=linkUpdate.exit();linkEnter.insert("path",".node").attr("class","link").attr("d",function(d){var o={x:source.x0,y:source.y0};return diagonal({source:o,target:o})}).transition().duration(500).attr("d",diagonal);linkUpdate.transition().duration(500).attr("d",diagonal);linkExit.transition().duration(500).attr("d",function(d){var o={x:source.x,y:source.y};return diagonal({source:o,target:o})}).remove();nodes.forEach(function(d){d.x0=d.x;d.y0=d.y})}function toggle(d){if(d.children){d._children=d.children;d.children=null}else{d.children=d._children;d._children=null}}}maketreechart(hot_json,3);
-      </script>
+  </div>
+  <!--pjax-container-->
+  <div id="pjax-container">
+    <div class="top">
+      <h1>赛事直播</h1>
     </div>
-    <!--!pjax-container-->
-    <!--#include File="include/footer.html"-->
-  </body>
+    <div class="stream-wrap p-wrap">
+      <div class="filter-stream">
+        <div class="filter-item-stream icon-blizz cur" id="initial1"></div>
+        <div class="filter-item-stream icon-wow"></div>
+        <div class="filter-item-stream icon-hs"></div>
+        <div class="filter-item-stream icon-hot"></div>
+        <div class="filter-item-stream icon-sc2"></div>
+      </div>
+      <div class="stream-wrapper">
+        <embed width="880" height="495" allownetworking="all" allowscriptaccess="always" src="http://staticlive.douyutv.com/common/share/play.swf?room_id=424559" quality="high" bgcolor="#000" wmode="window" allowfullscreen="true" allowFullScreenInteractive="true"></div>
+    </div>
+    <div class="top" id="chartarea">
+      <h1>对阵图表</h1>
+    </div>
+    <div class="chart-wrap p-wrap">
+      <div class="filter-match">
+        <div class="filter-item-match icon-wow cur" id="initial2"></div>
+        <div class="filter-item-match icon-hs"></div>
+        <div class="filter-item-match icon-hot"></div>
+        <div class="filter-item-match icon-sc2"></div>
+      </div>
+      <div class="chart">
+        <svg id="hs" width="1000px" height="550px">
+          <g transform="translate(56,20)"><g class="node" transform="translate(0,0)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">Thijs</text></g><g class="node" transform="translate(0,50)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">NoTomorrow</text></g><g class="node" transform="translate(0,100)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">Kno</text></g><g class="node" transform="translate(0,150)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">JAB</text></g><g class="node" transform="translate(0,250)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">Kranich</text></g><g class="node" transform="translate(0,300)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">Lifecoach</text></g><g class="node" transform="translate(0,350)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">Zoro</text></g><g class="node" transform="translate(0,400)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">Nias</text></g><g class="node" transform="translate(100,50)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(100,100)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(100,300)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(100,350)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(200,74)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(200,324)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(300,200)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(400,200)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">冠军</text></g><g class="node" transform="translate(500,200)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(600,74)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(600,324)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(700,50)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(700,100)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(700,300)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(700,350)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(800,0)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">LoveCX</text></g><g class="node" transform="translate(800,50)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">Ostkaka</text></g><g class="node" transform="translate(800,100)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">Hotform</text></g><g class="node" transform="translate(800,150)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">Neilyo</text></g><g class="node" transform="translate(800,250)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">Purple</text></g><g class="node" transform="translate(800,300)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">Pinpingho</text></g><g class="node" transform="translate(800,350)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">Neirea</text></g><g class="node" transform="translate(800,400)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">Diemeng</text></g></g>
+        </svg>
+        <svg id="hot" width="1000px" height="550px">
+          <g transform="translate(190,20)"><path class="link" d="M0,200C133.33333333333334,200 133.33333333333334,100 266.6666666666667,100"></path><path class="link" d="M0,200C133.33333333333334,200 133.33333333333334,300 266.6666666666667,300"></path><path class="link" d="M266.6666666666667,100C400,100 400,66.66666666666669 533.3333333333334,66.66666666666669"></path><path class="link" d="M266.6666666666667,100C400,100 400,133.33333333333334 533.3333333333334,133.33333333333334"></path><path class="link" d="M266.6666666666667,300C400,300 400,266.6666666666667 533.3333333333334,266.6666666666667"></path><path class="link" d="M266.6666666666667,300C400,300 400,333.33333333333337 533.3333333333334,333.33333333333337"></path><g class="node" transform="translate(0,180)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px">冠军</text></g><g class="node" transform="translate(266.6666564941406,80)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(533.3333129882812,46.66666793823242)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(533.3333129882812,113.33333587646484)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(266.6666564941406,280)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(533.3333129882812,246.6666717529297)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g><g class="node" transform="translate(533.3333129882812,313.3333435058594)"><rect class="nodeRect"></rect><text x="0" y="0" dx="5px" dy="26px"></text></g></g>
+        </svg>
+      </div>
+    </div>
+    <script>
+    $(function() {
+      $(".filter-item-stream").bind("mouseover", function() {
+        $(".filter-item-stream").removeClass("cur");
+        $(this).addClass("cur")
+      });
+      $(".filter-item-stream").bind("mouseout", function() {
+        $(".filter-item-stream").removeClass("cur");
+        $("#initial1").addClass("cur")
+      });
+      $(".filter-item-stream").bind("click", function() {
+        $(".filter-item-stream").attr("id", "");
+        $(this).attr("id", "initial1")
+      });
+      $(".filter-item-match").bind("mouseover", function() {
+        $(".filter-item-match").removeClass("cur");
+        $(this).addClass("cur")
+      });
+      $(".filter-item-match").bind("mouseout", function() {
+        $(".filter-item-match").removeClass("cur");
+        $("#initial2").addClass("cur")
+      });
+      $(".filter-item-match").bind("click", function() {
+        $(".filter-item-match").attr("id", "");
+        $(this).attr("id", "initial2");
+      })
+      $(".filter-match .icon-hs").click(function(){
+        $("svg").css("display","none");
+        $("#hs").css("display","block");
+      })
+      $(".filter-match .icon-hot").click(function(){
+        $("svg").css("display","none");
+        $("#hot").css("display","block");
+      })
+    });
+    </script>
+  </div>
+  <!--!pjax-container-->
+  <!--#include File="include/footer.html"-->
+</body>
 </html>

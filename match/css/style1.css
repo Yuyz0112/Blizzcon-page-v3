@@ -36,18 +36,19 @@ h2 { font-size: 16px; line-height: 24px }
 .header .home-logo:hover { color: #E8F2FF; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/centers-hover.png) center; -webkit-transition: background ease-in-out .5s; transition: background ease-in-out .5s }
 .header .home-logo span { position: relative; top: 12px }
 .header .nav-right { float: left; margin-left: 20px }
-.wrap { width: 1000px; height: 650px; margin: 0 auto;background: #27446E; background: rgba(39,68,110,0.5); margin-top: 80px ;filter:alpha(opacity=50);}
-.wrap .top { width: 1000px; height: 40px; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/top.png); text-align: center; color: #91C6FF; box-shadow: 0px 0px 10px #ffffff; margin-top: 20px }
-.wrap .filter { height: 80px; text-align: center; margin:0 auto; width: 400px}
-.wrap .filter .filter-item,.wrap .filter-match .filter-item-match { font-size: 30px; line-height: 60px; width: 60px; height: 60px; display: block; float: left; margin: 20px 10px 0 10px; color: #ffffff; text-shadow: 0px 0px 10px #ffffff; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/centers.png); cursor: pointer; }
-.wrap .filter .cur,.wrap .filter-match .cur { color: #29A9FF; text-shadow: 0px 0px 3px #29a9ff; }
-.wrap .filter .filter-item,.wrap .filter-match .filter-item-match [class^="icon-"] { }
-.wrap .filter .filter-item,.wrap .filter-match .filter-item-match [class^="icon-"]:before, .filter-item [class*=" icon-"]:before { margin-right: 0; }
-.wrap .stream-wrapper{width: 880px;height: 495px;margin:20px auto 0 auto;box-shadow: 0px 0px 6px #FFFFFF;border: 4px solid #91C6FF}
-.wrap .filter-match { height: 80px; text-align: center; margin:0 auto; width: 320px}
-.wrap .chart { width: 800px; height: 400px; margin: 20px auto }
+.top { width: 1000px; height: 40px; background: url(../img/v/top.png); text-align: center; color: #91C6FF; box-shadow: 0px 0px 10px #ffffff; margin-top: 20px }
+.p-wrap { width: 1000px; height: 650px; margin: 0 auto; background: #27446E; background: rgba(39, 68, 110, 0.5); filter: alpha(opacity=50); }
+.p-wrap .filter-stream { height: 80px; text-align: center; margin: 0 auto; width: 400px }
+.p-wrap .filter-stream .filter-item-stream, .p-wrap .filter-match .filter-item-match { font-size: 30px; line-height: 60px; width: 60px; height: 60px; display: block; float: left; margin: 20px 10px 0 10px; color: #ffffff; text-shadow: 0px 0px 10px #ffffff; background: url(http://wow.tgbus.com/special/blizzcon2015/img/v/centers.png); cursor: pointer; }
+.p-wrap .filter-stream .cur, .p-wrap .filter-match .cur { color: #29A9FF; text-shadow: 0px 0px 3px #29a9ff; }
+.p-wrap .filter-stream .filter-item-stream, .p-wrap .filter-match .filter-item-match [class^="icon-"] { }
+.p-wrap .filter-stream .filter-item-stream, .p-wrap .filter-match .filter-item-match [class^="icon-"]:before, .filter-item [class*=" icon-"]:before { margin-right: 0; }
+.p-wrap .stream-wrapper { width: 880px; height: 495px; margin: 20px auto 0 auto; box-shadow: 0px 0px 6px #FFFFFF; border: 4px solid #91C6FF }
+.p-wrap .filter-match { height: 80px; text-align: center; margin: 0 auto; width: 320px }
+.p-wrap .chart { width: 1000px; height: 550px; margin: 20px auto }
+.p-wrap .chart #hs{display: none}
 
 /*SVG Elements*/
-.nodeRect { cursor: pointer; fill: #fff; stroke: #91C6FF; stroke-width: 4px;rx:20px;ry:20px;}
-.node text { font-size: 14px;font-weight: bold}
-.link { fill: none; stroke: #ccc; stroke-width: 2px; }
+.nodeRect { fill: rgb(232, 242, 255); stroke: #91C6FF; stroke-width: 4px; rx: 20px; ry: 20px;width: 80px;height: 40px; }
+text { font-size: 14px; font-weight: bold ;opacity: 1}
+.link { fill: none; stroke: #ccc; stroke-width: 2px}
